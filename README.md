@@ -1,18 +1,16 @@
-# Super-Smtp-Server
+# Devloper-Smtp-Server
 
 ## Overview
-Super-Smtp-Server is a tiny SMTP server that is designed to allow developers to quickly check the mail sending functions of their application are working.
+Devloper-Smtp-Server is a tiny SMTP server that is designed to allow developers to quickly check the mail sending functions of their application are working.
 
 ### Features
 - Simple GUI
 - Multi-threaded, allows you to plug the server component into your own solution
 
-### What doesn't work
-- There's currently no kind of SMTP authentication available. You have to send mail without passwords and such.
 
 ## Use
 1. Start the server with:
-        SuperSmtpGui.exe
+        DeveloperSmtpGui.exe
 2. Point your mail-sending application to localhost, on port 25.
 3. Send your mail, get satisfaction from the fact that it shows in server's window.
 
@@ -32,20 +30,3 @@ The line below defines the Ip Address being used by Super-Smtp-Sever.
 #### Port Binding
 The line below defines the port that Super-Smtp-Server uses.
     <add key="SuperSmtpPort" value="25"/>
-
-
-## Screw your UI, I just want the server!
-If you're unhappy with the GUI that comes with Supert-Smtp-Server, then I would suggest utilising the wonderfully simple server component of Super-Smtp-Server.
-
-1. Clone this git repo
-2. Include the 'SuperSmtpServer' project in your solution (add a reference to the project, duh)
-3. Add a using statement in your code
-        using SuperSmtpServer;
-4. At an appropriate time, init the server component
-        var server = new SmtpServer();
-5. Add an event handler to the MessageReceived event
-        server.MessageRecieved += new MailMessageHandler(server_MessageRecieved);
-
-
-
-Use the project in anyway you wish.
